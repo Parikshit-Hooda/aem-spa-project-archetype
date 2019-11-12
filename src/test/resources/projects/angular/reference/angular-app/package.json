@@ -2,11 +2,11 @@
   "name": "angular-app",
   "version": "1.1.0",
   "private": true,
+  "homepage": "/etc.clientlibs/test-spa-angular-project/clientlibs/test-spa-angular-project-angular/resources",
   "scripts": {
-    "ng": "ng",
-    "build": "ng build --build-optimizer=false && clientlib",
-    "build:production": "ng build --prod --build-optimizer=false && clientlib",
-    "start": "ng serve --proxy-config ./proxy.aem.conf.json",
+    "start": "ng serve --open --proxy-config ./proxy.aem.conf.json",
+    "build": "ng build && clientlib",
+    "build:production": "ng build --prod && clientlib",
     "test": "ng test --watch=false",
     "test:debug": "ng test --watch=true",
     "lint": "tslint ./src/**/*.ts -t verbose",
@@ -32,12 +32,14 @@
     "angular-in-memory-web-api": "^0.8.0",
     "chart.js": "^2.8.0",
     "core-js": "^3.1.4",
+    "custom-event-polyfill": "^1.0.7",
     "node-fetch": "^2.6.0",
     "npm": "^6.10.2",
     "request": "^2.87.0",
     "rxjs": "^6.5.2",
     "ts-loader": "^6.0.4",
     "tslib": "^1.10.0",
+    "whatwg-fetch": "^3.0.0",
     "xhr2": "^0.2.0",
     "zone.js": "~0.9.1"
   },
@@ -48,7 +50,7 @@
     "@types/jasmine": "~3.3.16",
     "@types/jasminewd2": "^2.0.6",
     "@types/node": "^12.6.8",
-    "aem-clientlib-generator": "^1.4.3",
+    "aem-clientlib-generator": "^1.5.0",
     "body-parser": "^1.19.0",
     "codelyzer": "^5.0.1",
     "jasmine-core": "^3.4.0",
@@ -71,5 +73,8 @@
     "tslint": "^5.18.0",
     "typescript": "~3.4.0",
     "webpack-cli": "^3.3.6"
-  }
+  },
+  "browserslist": [
+    "defaults"
+  ]
 }
